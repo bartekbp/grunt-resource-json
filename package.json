@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Java resource bundle to json converter",
   "main": "tasks/resource_json.js",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/bartekbp/grunt-resource-json.git"
