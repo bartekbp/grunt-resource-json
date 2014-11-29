@@ -29,15 +29,17 @@ module.exports = function (grunt) {
             }).map(function (filepath) {
                 grunt.log.writeln('Reading "' + filepath + '"');
                 var content = grunt.file.read(filepath);
-                var regex = /^[\w.]+\s*=\s*\.+$/igm;
+                var regex = /^[\w.]+\s*=\s*.+$/igm;
                 var matches = content.match(regex);
+                var match = null;
                 var keyValueSepIndex = null;
                 var valueObj = {};
 
                 if (matches) {
                     for (var i = 0; i < matches.length; i++) {
-                        keyValueSepIndex = matches.indexOf("=");
-                        valueObj[matches.substr(0, keyValueSepIndex - 1).trim()] = matches.substr(keyValueSepIndex + 1).trim()
+                        match = matches[i];
+                        keyValueSepIndex = match.indexOf("=");
+                        valueObj[match.substr(0, keyValueSepIndex - 1).trim()] = match.substr(keyValueSepIndex + 1).trim()
                     }
                 } else {
                     grunt.log.warn('No key found in file "' + filepath + '"')
@@ -56,7 +58,7 @@ module.exports = function (grunt) {
                 }
             }
 
-            grunt.file.write(file.dest, JSON.stringify(mergedJson));
+            grunt.file.write(file.dest, JSON.stringify(mergedJson, null, 4));
             grunt.log.writeln('File "' + file.dest + '" created');
         });
     });

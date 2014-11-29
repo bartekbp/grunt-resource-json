@@ -1,0 +1,6 @@
+{
+    "file_key_mapper" : {
+        "line1": "this is a content of the first line!",
+        "line2": "this is content of the second line!"
+    }
+}

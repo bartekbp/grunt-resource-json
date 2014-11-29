@@ -1,0 +1,5 @@
+# this is dummy line
+line1 = this is a content of the first line!
+empty line -- should skip
+line2 = this is content of the second line!
+## another dumy line
