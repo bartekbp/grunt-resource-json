@@ -59,20 +59,14 @@ In this example, running `grunt resource_json`  will convert the two specified s
 
 ```js
 // Project configuration.
+var path = require('path');
+
 grunt.initConfig({
   resource_json: {
     dist: {
       options: {
           key_mapper: function(filepath) {
-            var lastSlashIndex = filepath.lastIndexOf("/");
-            var startSearchIndex = 0;
-            if(lastSlashIndex === -1) {
-              startSearchIndex = 0;
-            } else {
-              startSearchIndex = lastSlashIndex + 1;
-            }
-
-            return filepath.substring(startSearchIndex);
+            return path.basename(filepath);
           }
       },
       src: ["test/fixtures/multiple_files_no_key_mapper/1", "test/fixtures/multiple_files_no_key_mapper/2"],
