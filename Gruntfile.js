@@ -2,6 +2,8 @@
 
 
 module.exports = function (grunt) {
+    var path = require('path');
+
     grunt.initConfig({
         resource_json: {
             single_file_no_key_mapper: {
@@ -17,19 +19,10 @@ module.exports = function (grunt) {
             single_file_key_mapper: {
                 options: {
                     key_mapper: function(filepath) {
-                       var lastSlashIndex = filepath.indexOf("/");
-                       var startSearchIndex = 0;
-                       var filename, locale, localeIndex;
-                       if(lastSlashIndex === -1) {
-                           startSearchIndex = 0;
-                       } else {
-                           startSearchIndex = lastSlashIndex + 1;
-                       }
+                        var filename = path.basename(filepath);
+                        var localeIndex = filename.indexOf("_") + 1;
 
-                       filename = filepath.substring(lastSlashIndex);
-                       localeIndex = filename.indexOf("_") + 1;
-
-                       return filename.substring(localeIndex);
+                        return filename.substring(localeIndex);
                     }
                 },
                 src: "test/fixtures/single_file_key_mapper",
@@ -39,17 +32,8 @@ module.exports = function (grunt) {
             multiple_files_key_mapper: {
                 options: {
                     key_mapper: function(filepath) {
-                       var lastSlashIndex = filepath.lastIndexOf("/");
-                       var startSearchIndex = 0;
-                       var filename, locale, localeIndex;
-                       if(lastSlashIndex === -1) {
-                           startSearchIndex = 0;
-                       } else {
-                           startSearchIndex = lastSlashIndex + 1;
-                       }
-
-                       filename = filepath.substring(lastSlashIndex);
-                       localeIndex = filename.indexOf("_") + 1;
+                       var filename = path.basename(filepath);
+                       var localeIndex = filename.indexOf("_") + 1;
 
                        return filename.substring(localeIndex);
                     }
