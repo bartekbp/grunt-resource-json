@@ -65,9 +65,7 @@ grunt.initConfig({
   resource_json: {
     dist: {
       options: {
-          key_mapper: function(filepath) {
-            return path.basename(filepath);
-          }
+          key_mapper: path.basename
       },
       src: ["test/fixtures/multiple_files_no_key_mapper/1", "test/fixtures/multiple_files_no_key_mapper/2"],
       dest: 'dist/build.json'
