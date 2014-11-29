@@ -1,0 +1,34 @@
+{
+    "name": "grunt-resource-json",
+    "version": "0.1.0",
+    "description": "Java resource bundle to json converter",
+    "main": "tasks/resource_json.js",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bartekbp/grunt-resource-json.git"
+    },
+    "keywords": [
+        "resource",
+        "bundle",
+        "json"
+    ],
+    "author": "bartekbp",
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/bartekbp/grunt-resource-json/blob/master/LICENSE"
+        }
+    ],
+    "bugs": {
+        "url": "https://github.com/bartekbp/grunt-resource-json/issues"
+    },
+    "files": [
+        "tasks",
+        "LICENSE"
+    ],
+    "homepage": "https://github.com/bartekbp/grunt-resource-json",
+    "devDependencies": {
+        "grunt": "~0.4.5"
+    }
+}
