@@ -39,7 +39,7 @@ module.exports = function (grunt) {
                     for (var i = 0; i < matches.length; i++) {
                         match = matches[i];
                         keyValueSepIndex = match.indexOf("=");
-                        valueObj[match.substr(0, keyValueSepIndex - 1).trim()] = match.substr(keyValueSepIndex + 1).trim()
+                        valueObj[match.substr(0, keyValueSepIndex).trim()] = match.substr(keyValueSepIndex + 1).trim()
                     }
                 } else {
                     grunt.log.warn('No key found in file "' + filepath + '"')
