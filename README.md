@@ -76,4 +76,6 @@ grunt.initConfig({
 
 ## Release History
 
+ * 2014-12-19   v0.1.2   Added support for unicode.
+ * 2014-12-01   v0.1.1   Fixed removing first character of every translated text.
  * 2014-11-29   v0.1.0   First version.
