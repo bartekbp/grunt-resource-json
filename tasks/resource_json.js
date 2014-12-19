@@ -58,7 +58,7 @@ module.exports = function (grunt) {
                 }
             }
 
-            grunt.file.write(file.dest, JSON.stringify(mergedJson, null, 4));
+            grunt.file.write(file.dest, JSON.stringify(mergedJson, null, 4).replace(/\\\\/g,"\\"));
             grunt.log.writeln('File "' + file.dest + '" created');
         });
     });

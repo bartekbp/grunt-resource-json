@@ -46,6 +46,11 @@ module.exports = function (grunt) {
                 src: "test/fixtures/filter_out_invalid_lines",
                 dest: 'tmp/filter_out_invalid_lines',
                 nonull: true
+            },
+            unicode_support: {
+                src: "test/fixtures/unicode_support",
+                dest: 'tmp/unicode_support',
+                nonull: true
             }
         },
         nodeunit: {

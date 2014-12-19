@@ -1,6 +1,6 @@
 {
   "name": "grunt-resource-json",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Java resource bundle to json converter",
   "main": "tasks/resource_json.js",
   "repository": {
