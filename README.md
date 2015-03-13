@@ -22,7 +22,7 @@ grunt.loadNpmTasks('grunt-resource-json');
 ```
 
 ## Resource_json task
-_Run this task with the `grunt resource_json` command._
+Run this task with the `grunt resource_json` command.
 
 Task targets, files and options may be specified according to the Grunt [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
 
